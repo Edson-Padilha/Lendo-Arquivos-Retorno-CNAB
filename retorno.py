@@ -17,11 +17,28 @@ for col in linhas:
     
     if ir == "1":
         rt =  "Registro de Transação"
+#VALIDANDO TIPO DE INSCRIÇÃO DA EMPRESA
+    if tie == "1":
+        t = "CPF"
+
+    elif tie == "2":
+        t = "CNPJ"
+
+    elif tie == "3":
+        t = "PIS/PASEP"
+
+    elif tie == "98":
+        t = "NÃO TEM"
+
+    elif tie == "99":
+        t = "OUTROS"
+ 
+
 
     ocorrencia = str(col[108]+col[109])
 
     if cont != 1:        
-        print(f"{rt}")
+        print(f"{rt} - {t}")
         print(f"Linha : {cont} - Ocorrência: {ocorrencia}")
         print("-"*50)
 
