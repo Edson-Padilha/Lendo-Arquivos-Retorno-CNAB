@@ -1,5 +1,12 @@
+#Author: Edson Padilha
+
+
+# import kivy
+# kivy.require("1.9.1")
+# from kivy.app import App
 
 cont = 0
+
 
 print("="*50 )
 print(f"RETORNO C6".center(50))
@@ -46,3 +53,9 @@ print(f"Total de colunas: {len(col)}")#Conta a quantidade de colunas
 if len(col) > 400:
     print(f"Quantidade de colunas excedente no arquivo. Linha: {cont -1}")
 print(f"Total de documentos: {cont - 1}")#Total de registros no retorno
+
+class RetornoApp(App):
+    pass
+
+janela = RetornoApp()
+janela.run()
